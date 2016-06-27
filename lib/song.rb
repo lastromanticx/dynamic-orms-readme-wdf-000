@@ -41,6 +41,10 @@ class Song
     self.class.table_name
   end
 
+# question: couldn't there be a mismatch
+# between columns and values if null values 
+# are skipped?
+
   def values_for_insert
     values = []
     self.class.column_names.each do |col_name|
